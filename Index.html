@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Guddu ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+button {
+    background: white;
+    color: #ff4f81;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 25px;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.countdown {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin: 20px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between photos */
+    margin-top: 25px;
+    max-width: 1000px; /* Optional: limit width on larger screens */
+}
+
+.gallery img {
+    height: 400px; /* Height of all photos */
+    width: auto; /* Automatic width */
+    max-width: 100%; /* Limit the maximum width of the photo */
+    object-fit: contain; /* Show the entire photo */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.letter {
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+#surprise {
+    display: none;
+    margin-top: 25px;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Welcome Section -->
+<section id="welcome">
+    <h1>Happy Birthday, Guddu ❤️</h1>
+
+    <p>
+        Today is not just your birthday, my dearest Guddu...
+        <br>
+        It is the day the world became more beautiful because you were born.
+    </p>
+
+    <div class="countdown" id="countdown">Calculating...</div>
+
+    <button onclick="scrollToSection('memories')">
+        Our Beautiful Memories 📸
+    </button>
+</section>
+
+
+<!-- Memories Section -->
+<section id="memories">
+    <h2>Our Beautiful Memories 💕</h2>
+
+    <p>
+        Every single moment with you, Guddu, is a memory I want to keep forever.
+    </p>
+
+    <div class="gallery">
+        <img src="image_0.png" alt="Guddu portrait">
+        <img src="image_1.png" alt="Guddu with friend portrait">
+        <img src="image_2.png" alt="Guddu sitting at table portrait">
+        <img src="image_3.png" alt="Guddu and man with viola portrait">
+        <img src="image_4.png" alt="Guddu and man in mirror portrait">
+        <img src="image_5.png" alt="Guddu on boat portrait">
+        <img src="image_6.png" alt="Guddu close up portrait">
+        <img src="image_7.png" alt="Guddu and man in elevator portrait">
+    </div>
+
+    <button onclick="scrollToSection('letter')">
+        Read My Letter 💌
+    </button>
+</section>
+
+
+<!-- Letter Section -->
+<section id="letter">
+    <div class="letter">
+        <h2>My Letter To You, Guddu 💌</h2>
+
+        <p>
+            My dearest Guddu,
+            <br><br>
+            Happy Birthday to the most special person in my life!
+            You make my ordinary days feel extraordinary.
+            Your smile makes me happy, your presence gives me peace,
+            and your love makes my world complete.
+            <br><br>
+            I hope this year brings you everything your heart wishes for.
+            I promise to keep making incredible memories with you,
+            supporting your dreams, and loving you a little more every single day.
+            <br><br>
+            Thank you for simply being you, Guddu.
+            <br><br>
+            Forever yours,
+            <br>
+            <b>❤️ Your Love</b>
+        </p>
+    </div>
+
+    <button onclick="showSurprise()">
+        Click For Your Surprise 🎁
+    </button>
+
+    <div id="surprise">
+        🎉 Guddu, you are my absolute favorite person in the whole world! ❤️
+        <br><br>
+        I love you more than words can explain. 💖
+    </div>
+</section>
+
+<script>
+
+// Set Target Date to September 8th
+const birthday = new Date("September 8, 2026 00:00:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = birthday - now;
+
+    if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "🎉 Happy Birthday, Guddu! 🎂❤️";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s ❤️";
+}
+
+// Initial Call and Interval Setup
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Smooth Navigation
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+// Surprise Display
+function showSurprise() {
+    const surpriseBox = document.getElementById("surprise");
+    if (surpriseBox.style.display === "block") {
+        surpriseBox.style.display = "none";
+    } else {
+        surpriseBox.style.display = "block";
+    }
+}
+
+// Floating Hearts Engine
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 400);
+
+</script>
+
+</body>
+</html>
