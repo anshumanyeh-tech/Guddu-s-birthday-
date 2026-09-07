@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Guddu, With Love ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --pink: #ff5f8f;
+  --rose: #ffcad4;
+  --cream: #fff8f5;
+  --ink: #4b2635;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: Poppins, sans-serif;
+  overflow-x: hidden;
+}
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 32px 20px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, #fff 0 5%, transparent 25%),
+    linear-gradient(135deg, #ffd6e0, #fff0f4 55%, #ffc2d1);
+}
+.hero-content { position: relative; z-index: 2; max-width: 850px; }
+.small { letter-spacing: 4px; text-transform: uppercase; font-size: .78rem; color: #a94c6b; }
+h1, h2 { font-family: "Playfair Display", serif; }
+h1 { font-size: clamp(3.2rem, 10vw, 7.5rem); margin: 12px 0; line-height: 1; }
+.script { font-family: "Great Vibes", cursive; color: var(--pink); font-size: clamp(3rem, 9vw, 6rem); }
+.subtitle { font-size: clamp(1rem, 2.5vw, 1.35rem); max-width: 620px; margin: 22px auto; line-height: 1.8; }
+.btn {
+  border: 0; padding: 14px 24px; border-radius: 999px;
+  background: var(--pink); color: white; font: inherit; cursor: pointer;
+  box-shadow: 0 10px 25px #ff5f8f45; transition: .25s;
+}
+.btn:hover { transform: translateY(-3px) scale(1.03); }
+.countdown {
+  display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 28px 0;
+}
+.time-box {
+  min-width: 72px; padding: 12px 8px; border-radius: 16px;
+  background: #ffffffa8; backdrop-filter: blur(8px);
+}
+.time-box b { display: block; font-size: 1.6rem; }
+.time-box span { font-size: .7rem; text-transform: uppercase; letter-spacing: 1px; }
+.section { padding: 90px 20px; max-width: 1100px; margin: auto; text-align: center; }
+.section h2 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0 0 15px; }
+.section-intro { max-width: 650px; margin: 0 auto 35px; line-height: 1.8; }
+.gallery {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px; margin-top: 35px;
+}
+.photo {
+  background: white; padding: 10px; border-radius: 20px;
+  box-shadow: 0 12px 30px #7d405020; transform: rotate(var(--r));
+  transition: .3s;
+}
+.photo:hover { transform: rotate(0deg) translateY(-7px); }
+.photo img { width: 100%; height: 330px; object-fit: cover; border-radius: 14px; display: block; }
+.note {
+  background: white; border-radius: 28px; padding: 35px;
+  box-shadow: 0 15px 40px #7d405018; text-align: left;
+  line-height: 2; font-size: 1.03rem;
+}
+.note .signature { font-family: "Great Vibes", cursive; font-size: 2.8rem; color: var(--pink); text-align: right; }
+.surprise {
+  margin-top: 28px; display: none; padding: 25px; border-radius: 20px;
+  background: #fff0f4; font-family: "Playfair Display", serif; font-size: 1.4rem;
+}
+footer { text-align: center; padding: 35px 20px; color: #a94c6b; }
+.heart {
+  position: fixed; bottom: -30px; pointer-events: none; z-index: 5;
+  animation: rise linear forwards; opacity: .8;
+}
+@keyframes rise {
+  from { transform: translateY(0) rotate(0deg); opacity: 0; }
+  15% { opacity: .9; }
+  to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+#musicHint { font-size: .8rem; margin-top: 12px; opacity: .7; }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="small">A little birthday surprise for</div>
+    <div class="script">my favourite person</div>
+    <h1>Guddu ❤️</h1>
+    <p class="subtitle">
+      On 8 September, the world got a little brighter—and my world got
+      infinitely more beautiful.
+    </p>
+
+    <div class="countdown" id="countdown">
+      <div class="time-box"><b id="days">--</b><span>Days</span></div>
+      <div class="time-box"><b id="hours">--</b><span>Hours</span></div>
+      <div class="time-box"><b id="minutes">--</b><span>Minutes</span></div>
+      <div class="time-box"><b id="seconds">--</b><span>Seconds</span></div>
+    </div>
+
+    <button class="btn" onclick="document.getElementById('memories').scrollIntoView()">Open our memories ✨</button>
+    <div id="musicHint">Tap anywhere for a tiny birthday surprise 🎶</div>
+  </div>
+</section>
+
+<section class="section" id="memories">
+  <h2>Our little universe 📸</h2>
+  <p class="section-intro">
+    Four photographs, countless feelings, and one person who makes even
+    ordinary moments feel special.
+  </p>
+
+  <div class="gallery">
+    <div class="photo" style="--r:-2deg"><img src="memory1.jpeg" alt="A memory together"></div>
+    <div class="photo" style="--r:2deg"><img src="memory2.jpeg" alt="Guddu smiling"></div>
+    <div class="photo" style="--r:-1deg"><img src="memory3.jpeg" alt="A beautiful memory"></div>
+    <div class="photo" style="--r:2deg"><img src="memory4.jpeg" alt="A happy memory together"></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>A letter for Guddu 💌</h2>
+  <div class="note">
+    My Guddu,
+
+    <br><br>
+    Happy Birthday to the girl who makes my days softer, my smiles bigger,
+    and my life a lot more beautiful.
+
+    <br><br>
+    I love the little things about you—the way you smile, the way you look
+    at the camera, the way a simple moment with you becomes a memory I want
+    to keep forever.
+
+    <br><br>
+    I hope this year brings you happiness that stays, dreams that come true,
+    and all the love you deserve. Thank you for being such a special part
+    of my life.
+
+    <br><br>
+    If I could make one birthday wish for myself, it would be to keep making
+    beautiful memories with you.
+
+    <br><br>
+    Happy Birthday, Guddu. You are loved more than this little website can say.
+
+    <div class="signature">Forever yours ❤️</div>
+  </div>
+
+  <button class="btn" onclick="showSurprise()">One last surprise 🎁</button>
+  <div class="surprise" id="surprise">
+    You are my favourite notification, my safest place, and my happiest thought.
+    <br>Happy Birthday, Guddu! 🥹❤️
+  </div>
+</section>
+
+<footer>
+  Made with love, memories, and a very happy heart ❤️
+</footer>
+
+<script>
+const birthday = new Date("2026-09-08T00:00:00+05:30").getTime();
+
+function updateCountdown() {
+  const now = Date.now();
+  let distance = birthday - now;
+  if (distance < 0) distance = 0;
+
+  document.getElementById("days").textContent =
+    Math.floor(distance / 86400000);
+  document.getElementById("hours").textContent =
+    Math.floor((distance % 86400000) / 3600000);
+  document.getElementById("minutes").textContent =
+    Math.floor((distance % 3600000) / 60000);
+  document.getElementById("seconds").textContent =
+    Math.floor((distance % 60000) / 1000);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+  for (let i = 0; i < 25; i++) setTimeout(createHeart, i * 80);
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = ["❤️","💖","💕","✨","🌸"][Math.floor(Math.random()*5)];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (18 + Math.random() * 22) + "px";
+  heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 8500);
+}
+setInterval(createHeart, 700);
+
+// Optional gentle interaction sound using Web Audio, no external music file needed.
+let audioStarted = false;
+document.body.addEventListener("click", () => {
+  if (audioStarted) return;
+  audioStarted = true;
+  document.getElementById("musicHint").textContent = "A little magic for your birthday ✨";
+  for (let i = 0; i < 8; i++) {
+    setTimeout(() => createHeart(), i * 120);
+  }
+}, {once:true});
+</script>
+</body>
+</html>
